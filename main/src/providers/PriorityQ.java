@@ -1,4 +1,4 @@
-package Code_Questions;
+// package Code_Questions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -83,28 +83,7 @@ public class PriorityQ {
 			System.out.println( res.get(i).start + " and  " + res.get(i).end);
 		}
 		
-		
-		
-		
-		
-//		PriorityQueue<Integer> pq = new PriorityQueue<>();
-//		
-//		pq.add(4);
-//		pq.add(7);
-//		pq.add(1);
-//		pq.add(8);
-//		
-//		int n = pq.poll();
-//		System.out.println(n);
-//		n = pq.poll();
-//		System.out.println(n);
-//		n = pq.poll();
-//		System.out.println(n);
-//		n = pq.poll();
-//		System.out.println(n);
-		
-		
-		
+	
 	}
 	
 	private class Node{

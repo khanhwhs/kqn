@@ -1,10 +1,10 @@
-package Code_Questions;
+
 
 public class addBinaryStrings {
 
 	public static void main(String[] args) {
 		System.out.println(addBinary("11","1"));
-		System.out.println(convertBin("11101"));
+		// System.out.println(convertBin("11101"));
 
 	}
 	public static String addBinary(String a, String b) {

@@ -1,5 +1,7 @@
 package Code_Questions;
 
+import javax.print.event.PrintEvent;
+
 public class reverseLL {
 	
 	private static class Node{
@@ -18,8 +20,6 @@ public class reverseLL {
 		Node result = null;
 		reverse(node,result);
 		printList(result);
-//		Node r = reverse2(node);
-//		printList(r);
 		
 		
 
@@ -35,9 +35,6 @@ public class reverseLL {
 		return;
 	}
 	
-	// r(
-	
-	
 	
 	
 	// prints content of double linked list
@@ -46,7 +43,13 @@ public class reverseLL {
             System.out.print(node.val + " ");
             node = node.next;
         }
-    }
+	}
+	
+	// curr = 1->null
+
+	// prev = 1->null
+	// next = 2->3->4->null
+	
 	
 	static /* Function to reverse the linked list */
     Node reverse2(Node node) {

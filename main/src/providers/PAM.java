@@ -1,4 +1,4 @@
-package Code_Questions;
+// package Code_Questions;
 
 import java.util.Arrays;
 public class PAM {

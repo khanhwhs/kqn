@@ -46,17 +46,17 @@ public class TreeColumnPrint {
 		
 		printV(map,0,tree);
 
-		// System.out.println(map.toString());
+		System.out.println(height(tree));
 		// System.out.println(tree.left.data);
 
-		for (Entry<Integer, ArrayList<Node>> entry : map.entrySet())
-			{
-				for(Node i: entry.getValue()){
-					System.out.print(i.data + " ");
-				}
-				System.out.println();
+		// for (Entry<Integer, ArrayList<Node>> entry : map.entrySet())
+		// 	{
+		// 		for(Node i: entry.getValue()){
+		// 			System.out.print(i.data + " ");
+		// 		}
+		// 		System.out.println();
 				
-			}
+		// 	}
 
 
 		// q.add(tree);
@@ -99,6 +99,17 @@ public class TreeColumnPrint {
 			printV(map,hd+1,n.right);
 			return;
 		}
+	}
+
+	public static int height(Node n){
+		if (n==null) return 0;
+		return 1 + Math.max(height(n.left), height(n.right));
+	}
+
+	public static int width(Node n, int level){
+		if (n==null) return 0;
+		if(level == 1) return 1;
+		return width(n.left, level -1) + width(n.right, level +1);
 	}
 
 }
