@@ -1,5 +1,4 @@
-package Code_Questions;
-
+// package Code_Questions;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
@@ -10,8 +9,6 @@ public class NoSameAdj {
 		int [] cache = new int [26];
 		long start = System.nanoTime();
 
-
-//		System.out.println(cache[2]);
 		for(char c: s.toCharArray()){
 			if( cache[c -'a'] > 0) cache[c -'a'] = cache[c -'a'] + 1;
 			else cache[c -'a'] = 1;
@@ -28,6 +25,8 @@ public class NoSameAdj {
 			}
 			max = Math.max(cache[i], max);
 		}
+
+		System.out.println("Sorted array : " + sortedS);
 		
 		if( max > s.length()/2) {
 			System.out.println("too many identy cal char in one string");
@@ -39,15 +38,16 @@ public class NoSameAdj {
 
 	}
 	
-	public static String calc (String s){
+	public static String calc(String s){
 		
 		char [] arr = s.toCharArray();
-		String res = "";
+		StringBuilder res = new StringBuilder();
 		for(int i = 0; i < arr.length /2; i++){
-			res+= arr[i];
-			res+=arr[arr.length -i-1];
+			res.append(arr[i]);
+			System.out.println("2nd char : " + arr[arr.length -i-1]);
+			res.append(arr[arr.length -i-1]);
 		}
-		return res; 
+		return res.toString(); 
 	}
 
 }

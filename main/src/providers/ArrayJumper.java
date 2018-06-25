@@ -1,10 +1,9 @@
-package Code_Questions;
+// package Code_Questions;
 
 public class ArrayJumper {
 	public static void main( String [] args){
-		
-		int [] arr2 = {3, 1, 0, 1, 1, 1, 1, 1, 1, 8, 9};
-					            	
+					    
+		int [] arr2 = {3, 1, 0, 1, 1, 1, 1, 1, 1, 8, 9};	            	
 
 		int maxR = arr2[0];
 		int jump = 1;

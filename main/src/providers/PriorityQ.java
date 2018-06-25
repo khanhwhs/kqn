@@ -50,15 +50,18 @@ public class PriorityQ {
 		ArrayList<NodeI> list2 = new ArrayList<>();
 		list2.add(new NodeI(1,3));
 		list2.add(new NodeI(2,6));
-		list2.add(new NodeI(8,10));
+		list2.add(new NodeI(1,10));
 		list2.add(new NodeI(15,20));
-		
-		Collections.sort(list2, new Comparator<NodeI>() {
+
+		Collections.sort(list2, new Comparator<NodeI>(){
 			public int compare(NodeI a, NodeI b){
-				return a.start - b.start;
+				return b.start - a.start;
 			}
-			
 		});
+
+		for ( NodeI i : list2){
+			System.out.println("num is "+ i.start +  " end is: " + i.end);
+		}
 		for ( PQ i : list){
 			System.out.println("num is "+ i.str +  " str is: " + i.string);
 		}

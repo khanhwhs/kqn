@@ -1,4 +1,4 @@
-package Code_Questions;
+// package Code_Questions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,38 @@ import java.util.Scanner;
 public class Solution {
     
     private int mem[][];
-    private ArrayList<ArrayList<Integer>> A;
+	private ArrayList<ArrayList<Integer>> A;
+	
+	public static void main(String[] args) {
+		String s = "   ";
+		StringBuilder sb = new StringBuilder();
+		int k = 0;
+		int m = 0;
+        
+        for(int i = s.length() -1 ; i>=0; i--){
+			// System.out.println( "i = "+ i + "   k is :" + k + " current sb: " + sb.toString());
+            if(s.charAt(i) == ' '){
+				sb.append(s.charAt(i));
+				m = k+1;
+            }else{
+                sb.insert(m,s.charAt(i));
+            }
+            k++;
+        }
+        
+        System.out.println(reverseWords(s)) ;
+	}
+
+	public static String reverseWords(String s) {
+        StringBuilder sb = new StringBuilder();
+        if(s.length() == 0 || s == null)
+            return sb.toString();
+        String[] tmp = s.split("\\s{1,}");
+        for(int i = tmp.length-1; i>=0; i--) {
+            sb.append(tmp[i] + " ");
+        }
+        return sb.toString().trim();
+    }
     
 	public int minPathSum(ArrayList<ArrayList<Integer>> A) {
 	    int m, n;

@@ -23,3 +23,9 @@ public class NearestSmallerNum {
 			System.out.print(i + " ");
 	}
 }
+
+
+
+//Given an array of integers, find the nearest smaller number for every element such that the smaller element is on left side. 
+
+int [] arr = {2,6,4,9,6,78,3,1,35,6,7,4};
